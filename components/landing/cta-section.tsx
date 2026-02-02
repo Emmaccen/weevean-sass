@@ -7,7 +7,7 @@ import { ArrowRight, Github, Sparkles } from "lucide-react";
 export function CTASection() {
   return (
     <section className="relative py-32 px-4 overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-accent/20 via-black to-black opacity-40" />
+      <div className="absolute inset-0 bg-linear-to-r from-accent/20 via-black to-black opacity-40" />
 
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-accent/20 rounded-full blur-[120px] pointer-events-none opacity-50" />
       <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-purple-500/10 rounded-full blur-[120px] pointer-events-none opacity-50" />
@@ -20,7 +20,7 @@ export function CTASection() {
           transition={{ duration: 0.5 }}
           className="relative rounded-3xl border border-white/10 backdrop-blur-2xl p-8 md:p-16 overflow-hidden"
         >
-          <div className="absolute inset-0 bg-gradient-to-b from-white/10 to-transparent pointer-events-none" />
+          <div className="absolute inset-0 bg-linear-to-b from-white/10 to-transparent pointer-events-none" />
 
           <div className="relative z-10">
             <div className="mb-6 inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 bg-black/20 text-sm font-medium text-accent">

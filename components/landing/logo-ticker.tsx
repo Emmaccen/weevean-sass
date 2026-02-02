@@ -25,7 +25,7 @@ export function LogoTicker() {
             ease: "linear",
             repeat: Infinity,
           }}
-          className="flex flex-shrink-0 gap-14 pr-14"
+          className="flex shrink-0 gap-14 pr-14"
         >
           {[...companies, ...companies].map((company, index) => (
             <div

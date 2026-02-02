@@ -28,7 +28,7 @@ export function HeroSection() {
         fill="white"
       />
 
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#1f2937_1px,transparent_1px),linear-gradient(to_bottom,#1f2937_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_110%)] opacity-[0.15] pointer-events-none" />
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#1f2937_1px,transparent_1px),linear-gradient(to_bottom,#1f2937_1px,transparent_1px)] bg-size-[4rem_4rem] mask-[radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_110%)] opacity-[0.15] pointer-events-none" />
 
       <div className="relative z-10 max-w-5xl mx-auto text-center px-4">
         <motion.div
@@ -38,7 +38,7 @@ export function HeroSection() {
           className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-white/5 backdrop-blur-xl mb-8 group cursor-pointer hover:border-accent/50 transition-colors"
         >
           <Sparkles className="w-4 h-4 text-accent animate-pulse" />
-          <span className="text-sm font-medium bg-clip-text text-transparent bg-gradient-to-r from-neutral-200 to-neutral-400 group-hover:from-accent group-hover:to-accent/80 transition-all duration-300">
+          <span className="text-sm font-medium bg-clip-text text-transparent bg-linear-to-r from-neutral-200 to-neutral-400 group-hover:from-accent group-hover:to-accent/80 transition-all duration-300">
             Weevean is now live — Open Source & AI-Powered
           </span>
         </motion.div>
@@ -52,7 +52,7 @@ export function HeroSection() {
           Chat that <br className="hidden md:block" />
           <span className="relative inline-block">
             <span className="absolute -inset-1 rounded-lg bg-accent/20 blur-xl opacity-50" />
-            <span className="relative text-transparent bg-clip-text bg-gradient-to-b from-accent to-teal-500">
+            <span className="relative text-transparent bg-clip-text bg-linear-to-b from-accent to-teal-500">
               actually codes.
             </span>
           </span>
@@ -64,9 +64,9 @@ export function HeroSection() {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="text-lg sm:text-xl text-neutral-400 max-w-2xl mx-auto mb-12 leading-relaxed"
         >
-          Weevean isn't just a chat app. It's a self-hosted workspace that
-          understands your codebase, runs snippets, and summarizes threads
-          instantly.
+          {
+            "Weevean isn't just a chat app. It's a self-hosted workspace that understands your codebase, runs snippets, and summarizes threads instantly."
+          }
         </motion.p>
 
         <motion.div
@@ -131,11 +131,15 @@ export function HeroSection() {
                     (channel) => (
                       <div
                         key={channel}
-                        className={`px-2 py-1.5 rounded-md text-sm cursor-pointer flex items-center gap-2 ${channel === "engineering" ? "bg-white/10 text-white" : "text-neutral-400 hover:bg-white/5 hover:text-neutral-300"}`}
+                        className={`px-2 py-1.5 rounded-md text-sm cursor-pointer flex items-center gap-2 ${
+                          channel === "engineering"
+                            ? "bg-white/10 text-white"
+                            : "text-neutral-400 hover:bg-white/5 hover:text-neutral-300"
+                        }`}
                       >
                         <span className="text-neutral-600">#</span> {channel}
                       </div>
-                    ),
+                    )
                   )}
                 </div>
               </div>
@@ -156,8 +160,9 @@ export function HeroSection() {
                         </span>
                       </div>
                       <p className="text-neutral-400 text-sm leading-relaxed">
-                        Can someone help me optimize this fetch function? It's
-                        causing render blocking.
+                        {
+                          " Can someone help me optimize this fetch function? It's causing render blocking."
+                        }
                       </p>
                       <div className="mt-3 rounded-lg bg-[#0F0F0F] border border-white/5 p-4 font-mono text-sm overflow-x-auto shadow-inner">
                         <TextGenerateEffect
@@ -192,10 +197,9 @@ export function HeroSection() {
                       </div>
                       <div className="p-4 rounded-xl bg-[#111] border border-accent/20 shadow-sm">
                         <p className="text-neutral-300 text-sm mb-3">
-                          I found a potential performance issue. You're awaiting
-                          the fetch in the main thread which might block UI
-                          updates if the network is slow. Try using a Service
-                          Worker or SWR for caching.
+                          {
+                            "I found a potential performance issue. You're awaiting the fetch in the main thread which might block UI updates if the network is slow. Try using a Service Worker or SWR for caching."
+                          }
                         </p>
                         <div className="flex items-center gap-2">
                           <Button

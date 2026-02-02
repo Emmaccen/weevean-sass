@@ -40,7 +40,7 @@ export function HowItWorks() {
         </div>
 
         <div className="relative">
-          <div className="absolute top-12 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent hidden md:block" />
+          <div className="absolute top-12 left-0 right-0 h-px bg-linear-to-r from-transparent via-white/10 to-transparent hidden md:block" />
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             {steps.map((step, index) => (
@@ -57,7 +57,7 @@ export function HowItWorks() {
                     <div className="w-24 h-24 rounded-3xl bg-[#0A0A0A] border border-white/10 flex items-center justify-center group-hover:border-accent/50 group-hover:shadow-[0_0_30px_rgba(34,211,238,0.2)] transition-all duration-500">
                       <step.icon className="w-8 h-8 text-neutral-400 group-hover:text-accent transition-colors duration-500" />
                     </div>
-                    <div className="absolute -top-3 -right-3 w-8 h-8 rounded-full bg-accent border-[4px] border-[#0A0A0A] flex items-center justify-center shadow-lg">
+                    <div className="absolute -top-3 -right-3 w-8 h-8 rounded-full bg-accent border-4 border-[#0A0A0A] flex items-center justify-center shadow-lg">
                       <span className="text-xs font-black text-black">
                         {index + 1}
                       </span>

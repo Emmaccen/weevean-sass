@@ -1,8 +1,16 @@
 "use client";
 
 import { motion, useMotionTemplate, useMotionValue } from "framer-motion";
-import { Code2, FileText, Lock, Sparkles, Terminal, Zap } from "lucide-react";
-import { MouseEvent } from "react";
+import {
+  Code2,
+  FileText,
+  Lock,
+  LucideProps,
+  Sparkles,
+  Terminal,
+  Zap,
+} from "lucide-react";
+import { ForwardRefExoticComponent, MouseEvent, RefAttributes } from "react";
 
 const features = [
   {
@@ -50,7 +58,29 @@ const features = [
   },
 ];
 
-function FeatureCard({ feature }: { feature: any }) {
+function FeatureCard({
+  feature,
+}: {
+  feature:
+    | {
+        icon: ForwardRefExoticComponent<
+          Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>
+        >;
+        title: string;
+        description: string;
+        className: string;
+        badge?: undefined;
+      }
+    | {
+        icon: ForwardRefExoticComponent<
+          Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>
+        >;
+        title: string;
+        description: string;
+        className: string;
+        badge: string;
+      };
+}) {
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
 
@@ -117,7 +147,7 @@ export function FeaturesSection() {
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Everything you need to <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-neutral-200 to-neutral-500">
+            <span className="text-transparent bg-clip-text bg-linear-to-r from-neutral-200 to-neutral-500">
               build faster together.
             </span>
           </h2>

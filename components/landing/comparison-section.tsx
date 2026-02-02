@@ -96,7 +96,7 @@ export function ComparisonSection() {
             Why teams move to Weevean
           </h2>
           <p className="text-lg text-neutral-400">
-            Stop paying for "Add-ons" just to get basic AI features.
+            {'Stop paying for "Add-ons" just to get basic AI features.'}
           </p>
         </div>
 
@@ -106,7 +106,7 @@ export function ComparisonSection() {
               Feature
             </div>
             <div className="col-span-1 p-6 text-center text-xl font-bold text-white bg-white/5 rounded-t-2xl border-x border-t border-white/10 relative">
-              <div className="absolute inset-x-0 -top-px h-px bg-gradient-to-r from-transparent via-accent to-transparent opacity-50" />
+              <div className="absolute inset-x-0 -top-px h-px bg-linear-to-r from-transparent via-accent to-transparent opacity-50" />
               Weevean
             </div>
             <div className="col-span-1 p-6 text-center text-lg font-medium text-neutral-400 relative">
@@ -126,7 +126,7 @@ export function ComparisonSection() {
                 </div>
                 <div className="col-span-1 p-6 flex items-center justify-center border-x border-b border-white/5 bg-white/5 relative group-hover:bg-white/10 transition-colors">
                   {idx === features.length - 1 && (
-                    <div className="absolute inset-x-0 -bottom-px h-px bg-gradient-to-r from-transparent via-accent to-transparent opacity-50" />
+                    <div className="absolute inset-x-0 -bottom-px h-px bg-linear-to-r from-transparent via-accent to-transparent opacity-50" />
                   )}
                   <FeatureStatus status={feature.weevean} />
                 </div>

@@ -34,7 +34,7 @@ export function AIShowcase() {
               className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight"
             >
               AI that understands <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-teal-600">
+              <span className="text-transparent bg-clip-text bg-linear-to-r from-accent to-teal-600">
                 your entire context.
               </span>
             </motion.h2>
@@ -78,13 +78,21 @@ export function AIShowcase() {
                   onMouseEnter={() => setActiveTab(idx)}
                 >
                   <div
-                    className={`w-12 h-12 rounded-xl flex items-center justify-center shrink-0 transition-all duration-300 ${activeTab === idx ? "bg-accent text-black scale-110 shadow-lg shadow-accent/20" : "bg-white/5 text-neutral-400 group-hover:bg-white/10 group-hover:text-white"}`}
+                    className={`w-12 h-12 rounded-xl flex items-center justify-center shrink-0 transition-all duration-300 ${
+                      activeTab === idx
+                        ? "bg-accent text-black scale-110 shadow-lg shadow-accent/20"
+                        : "bg-white/5 text-neutral-400 group-hover:bg-white/10 group-hover:text-white"
+                    }`}
                   >
                     <item.icon className="w-6 h-6" />
                   </div>
                   <div>
                     <h3
-                      className={`text-lg font-bold mb-1 transition-colors ${activeTab === idx ? "text-white" : "text-neutral-400 group-hover:text-neutral-200"}`}
+                      className={`text-lg font-bold mb-1 transition-colors ${
+                        activeTab === idx
+                          ? "text-white"
+                          : "text-neutral-400 group-hover:text-neutral-200"
+                      }`}
                     >
                       {item.title}
                     </h3>
@@ -96,7 +104,7 @@ export function AIShowcase() {
           </div>
 
           <div className="relative">
-            <div className="absolute -inset-1 bg-gradient-to-r from-accent to-teal-500 rounded-2xl opacity-20 blur-lg" />
+            <div className="absolute -inset-1 bg-linear-to-r from-accent to-teal-500 rounded-2xl opacity-20 blur-lg" />
             <div className="relative rounded-2xl border border-white/10 bg-[#0A0A0A] p-6 lg:p-8 min-h-[400px] flex flex-col shadow-2xl">
               <div className="flex items-center justify-between border-b border-white/5 pb-4 mb-4">
                 <div className="flex items-center gap-3">
@@ -139,8 +147,9 @@ export function AIShowcase() {
                           </span>{" "}
                           yesterday:
                           <div className="mt-3 bg-black/40 p-3 rounded-lg border-l-2 border-accent text-xs text-neutral-400 italic">
-                            "We're targeting Q2 for the v2 API rollout. All
-                            deprecated endpoints will preserve compatibility..."
+                            {
+                              "We're targeting Q2 for the v2 API rollout. All deprecated endpoints will preserve compatibility..."
+                            }
                           </div>
                         </div>
                       </div>
@@ -156,7 +165,7 @@ export function AIShowcase() {
                   >
                     <div className="bg-[#111] rounded-lg p-4 font-mono text-xs border border-white/10">
                       <div className="text-neutral-500 mb-2">
-                        // Analyzing function...
+                        {"// Analyzing function..."}
                       </div>
                       <TextGenerateEffect
                         words="Found 2 optimizations. 1. Use const instead of let. 2. Remove blocking sync call."
@@ -180,7 +189,7 @@ export function AIShowcase() {
                     </h4>
                     <p className="text-sm text-neutral-400 max-w-xs">
                       Your conversations effectively disappear from the AI
-                      provider's servers instantly.
+                      {"provider's servers instantly."}
                     </p>
                     <div className="flex gap-2 mt-4">
                       <span className="px-2 py-1 bg-green-500/10 text-green-500 text-[10px] rounded border border-green-500/20 flex items-center gap-1">
@@ -199,14 +208,4 @@ export function AIShowcase() {
       </div>
     </section>
   );
-}
-
-function Span({
-  children,
-  className,
-}: {
-  children: React.ReactNode;
-  className?: string;
-}) {
-  return <span className={className}>{children}</span>;
 }
