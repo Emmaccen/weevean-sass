@@ -4,7 +4,6 @@ import Link from "next/link";
 const navigation = {
   product: [
     { name: "Features", href: "#features" },
-    { name: "Pricing", href: "#pricing" },
     { name: "Roadmap", href: "#roadmap" },
     { name: "Changelog", href: "#changelog" },
   ],
